@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://www.devhelp.net/book" title="Farstream Plugins Manual" link="index.html" author="" name="farstream-plugins" version="2" language="c" online="http://farstream.freedesktop.org/apidoc/farstream-plugins/">
+  <chapters>
+    <sub name="Plugins implementing FsConference" link="pt01.html">
+      <sub name="RTP Plugin" link="ch01.html">
+        <sub name="FsRtpConference" link="FsRtpConference.html"/>
+        <sub name="FsRtpParticipant" link="FsRtpParticipant.html"/>
+        <sub name="FsRtpSession" link="FsRtpSession.html"/>
+        <sub name="FsRtpStream" link="FsRtpStream.html"/>
+      </sub>
+      <sub name="Raw Plugin" link="ch02.html">
+        <sub name="FsRawConference" link="FsRawConference.html"/>
+        <sub name="FsRawParticipant" link="farstream-plugins-FsRawParticipant.html"/>
+        <sub name="FsRawSession" link="farstream-plugins-FsRawSession.html"/>
+        <sub name="FsRawStream" link="farstream-plugins-FsRawStream.html"/>
+      </sub>
+    </sub>
+    <sub name="Transmitters" link="pt02.html">
+      <sub name="FsRawUdpStreamTransmitter" link="farstream-plugins-FsRawUdpStreamTransmitter.html"/>
+      <sub name="FsMulticastStreamTransmitter" link="farstream-plugins-FsMulticastStreamTransmitter.html"/>
+      <sub name="FsNiceStreamTransmitter" link="farstream-plugins-FsNiceStreamTransmitter.html"/>
+      <sub name="FsShmStreamTransmitter" link="farstream-plugins-FsShmStreamTransmitter.html"/>
+    </sub>
+    <sub name="Utility elements" link="pt03.html">
+      <sub name="FsVideoanyrate" link="FsVideoanyrate.html"/>
+      <sub name="FsRTPXdataPay" link="FsRTPXdataPay.html"/>
+      <sub name="FsRTPXdataDepay" link="FsRTPXdataDepay.html"/>
+    </sub>
+  </chapters>
+  <functions>
+    <keyword type="struct" name="struct FsRtpConference" link="FsRtpConference.html#FsRtpConference-struct"/>
+    <keyword type="property" name="The “sdes” property" link="FsRtpConference.html#FsRtpConference--sdes"/>
+    <keyword type="struct" name="struct FsRtpParticipant" link="FsRtpParticipant.html#FsRtpParticipant-struct"/>
+    <keyword type="property" name="The “cname” property" link="FsRtpParticipant.html#FsRtpParticipant--cname"/>
+    <keyword type="struct" name="struct FsRtpSession" link="FsRtpSession.html#FsRtpSession-struct"/>
+    <keyword type="property" name="The “internal-session” property" link="FsRtpSession.html#FsRtpSession--internal-session"/>
+    <keyword type="property" name="The “no-rtcp-timeout” property" link="FsRtpSession.html#FsRtpSession--no-rtcp-timeout"/>
+    <keyword type="property" name="The “rtp-header-extension-preferences” property" link="FsRtpSession.html#FsRtpSession--rtp-header-extension-preferences"/>
+    <keyword type="property" name="The “rtp-header-extensions” property" link="FsRtpSession.html#FsRtpSession--rtp-header-extensions"/>
+    <keyword type="property" name="The “send-bitrate” property" link="FsRtpSession.html#FsRtpSession--send-bitrate"/>
+    <keyword type="property" name="The “ssrc” property" link="FsRtpSession.html#FsRtpSession--ssrc"/>
+    <keyword type="struct" name="struct FsRtpStream" link="FsRtpStream.html#FsRtpStream-struct"/>
+    <keyword type="property" name="The “rtp-header-extensions” property" link="FsRtpStream.html#FsRtpStream--rtp-header-extensions"/>
+    <keyword type="property" name="The “send-rtcp-mux” property" link="FsRtpStream.html#FsRtpStream--send-rtcp-mux"/>
+    <keyword type="struct" name="struct FsRawConference" link="FsRawConference.html#FsRawConference-struct"/>
+    <keyword type="struct" name="struct FsRawParticipant" link="farstream-plugins-FsRawParticipant.html#FsRawParticipant"/>
+    <keyword type="struct" name="FsRawSession" link="farstream-plugins-FsRawSession.html#FsRawSession"/>
+    <keyword type="struct" name="struct FsRawStream" link="farstream-plugins-FsRawStream.html#FsRawStream"/>
+    <keyword type="struct" name="struct FsRawUdpStreamTransmitter" link="farstream-plugins-FsRawUdpStreamTransmitter.html#FsRawUdpStreamTransmitter"/>
+    <keyword type="struct" name="struct FsMulticastStreamTransmitter" link="farstream-plugins-FsMulticastStreamTransmitter.html#FsMulticastStreamTransmitter"/>
+    <keyword type="struct" name="struct FsNiceStreamTransmitter" link="farstream-plugins-FsNiceStreamTransmitter.html#FsNiceStreamTransmitter"/>
+    <keyword type="struct" name="struct FsShmStreamTransmitter" link="farstream-plugins-FsShmStreamTransmitter.html#FsShmStreamTransmitter"/>
+    <keyword type="struct" name="struct FsVideoanyrate" link="FsVideoanyrate.html#FsVideoanyrate-struct"/>
+    <keyword type="struct" name="struct FsRTPXdataPay" link="FsRTPXdataPay.html#FsRTPXdataPay-struct"/>
+    <keyword type="struct" name="struct FsRTPXdataDepay" link="FsRTPXdataDepay.html#FsRTPXdataDepay-struct"/>
+    <keyword type="member" name="FsRawUdpStreamTransmitter.parent" link="farstream-plugins-FsRawUdpStreamTransmitter.html#FsRawUdpStreamTransmitter.parent"/>
+    <keyword type="member" name="FsMulticastStreamTransmitter.parent" link="farstream-plugins-FsMulticastStreamTransmitter.html#FsMulticastStreamTransmitter.parent"/>
+    <keyword type="member" name="FsNiceStreamTransmitter.parent" link="farstream-plugins-FsNiceStreamTransmitter.html#FsNiceStreamTransmitter.parent"/>
+    <keyword type="member" name="FsShmStreamTransmitter.parent" link="farstream-plugins-FsShmStreamTransmitter.html#FsShmStreamTransmitter.parent"/>
+  </functions>
+</book>

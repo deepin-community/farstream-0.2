@@ -1,0 +1,5 @@
+FsConference GstChildProxy
+FsRawConference GstChildProxy
+FsRtpConference GstChildProxy
+GstBin GstChildProxy
+GstPipeline GstChildProxy

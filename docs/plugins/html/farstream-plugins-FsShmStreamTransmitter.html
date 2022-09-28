@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>FsShmStreamTransmitter: Farstream Plugins Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="Farstream Plugins Manual">
+<link rel="up" href="pt02.html" title="Part II. Transmitters">
+<link rel="prev" href="farstream-plugins-FsNiceStreamTransmitter.html" title="FsNiceStreamTransmitter">
+<link rel="next" href="pt03.html" title="Part III. Utility elements">
+<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#farstream-plugins-FsShmStreamTransmitter.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="pt02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="farstream-plugins-FsNiceStreamTransmitter.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="pt03.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="farstream-plugins-FsShmStreamTransmitter"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="farstream-plugins-FsShmStreamTransmitter.top_of_page"></a>FsShmStreamTransmitter</span></h2>
+<p>FsShmStreamTransmitter — A stream transmitter object for Shared Memory</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="farstream-plugins-FsShmStreamTransmitter.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="farstream-plugins-FsShmStreamTransmitter.html#FsShmStreamTransmitter" title="struct FsShmStreamTransmitter">FsShmStreamTransmitter</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="farstream-plugins-FsShmStreamTransmitter.description"></a><h2>Description</h2>
+<p>The name of this transmitter is "shm".</p>
+<p>This transmitter is meant to send and received the data from another process
+on the same system while minimizing the memory pressure associated with the
+use of sockets.</p>
+<p>Two sockets are used to control the shared memory areas. One is used to
+send data and one to receive data. The receiver always connects to the
+sender. The sender socket must exist before the receiver connects to it.</p>
+<p>Negotiating the paths of the sockets can happen in two ways. If the
+create-local-candidates is True then the transmitter will generate the
+path of the local candidate and us it as the ip filed in <span class="type">FsCandidate</span>. The
+transmitter will expect the path of the applications sender socket to be in
+the "ip" field of the remote candidates <span class="type">FsCandidate</span> as well.</p>
+<p>Or alternatively, if create-local-candidates is false then
+the sender socket can be created by giving the transmitter a candidate
+with the path of the socket in the "ip" field of the <span class="type">FsCandidate</span>. This
+<span class="type">FsCandidate</span> can be given to the <span class="type">FsStreamTransmitter</span> in two ways, either
+by setting the <span class="type">“preferred-local-candidates”</span> property
+or by calling the <code class="function">fs_stream_transmitter_force_remote_candidates()</code> function.
+There can be only one single send socket per stream. When the send socket
+is ready to be connected to, <span class="type">“new-local-candidate”</span> signal
+will be emitted.</p>
+<p>To connect the receive side to the other application, one must create a
+<span class="type">FsCandidate</span> with the path of the sender's socket in the "username" field.
+If the receiver can not connect to the sender,
+the <code class="function">fs_stream_transmitter_force_remote_candidates()</code> call will fail.</p>
+</div>
+<div class="refsect1">
+<a name="farstream-plugins-FsShmStreamTransmitter.functions_details"></a><h2>Functions</h2>
+<p></p>
+</div>
+<div class="refsect1">
+<a name="farstream-plugins-FsShmStreamTransmitter.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="FsShmStreamTransmitter"></a><h3>struct FsShmStreamTransmitter</h3>
+<pre class="programlisting">struct FsShmStreamTransmitter {
+  FsStreamTransmitter parent;
+};
+</pre>
+<p>All members are private, access them using methods and properties</p>
+<div class="refsect3">
+<a name="FsShmStreamTransmitter.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><span class="type">FsStreamTransmitter</span> <em class="structfield"><code><a name="FsShmStreamTransmitter.parent"></a>parent</code></em>;</p></td>
+<td class="struct_member_description"><p>Parent object</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.29</div>
+</body>
+</html>
