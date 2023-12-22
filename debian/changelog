@@ -1,3 +1,12 @@
+farstream-0.2 (0.2.9-2) unstable; urgency=medium
+
+  * Team upload
+  * Cherry-pick patch to allow building against newer gupnp packages
+  * Add patch to build against gupnp-igd 1.6
+  * debian/control: Update Build-Depends for gupnp-igd 1.6
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Thu, 17 Aug 2023 07:10:51 -0400
+
 farstream-0.2 (0.2.9-1) unstable; urgency=medium
 
   * New upstream release
