@@ -1,1 +1,3 @@
 build-Adapt-to-backwards-incompatible-change-in-GNU-Make-.patch
+rawudp-upnp-test-Also-build-against-new-GUPnP-1.2-library.patch
+Build-with-gunp-igd-1.6.patch

@@ -11,7 +11,7 @@ Build-Depends: debhelper-compat (= 12),
                libglib2.0-dev (>= 2.40),
                libgstreamer-plugins-base1.0-dev (>= 1.4),
                libgstreamer1.0-dev (>= 1.4),
-               libgupnp-igd-1.0-dev,
+               libgupnp-igd-1.6-dev,
                libnice-dev (>= 0.1.8),
                uuid-dev
 Build-Depends-Indep: libglib2.0-doc <!nodoc>
